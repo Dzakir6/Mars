@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:title" content="Buy land on mars!" />
+    <meta property="og:description" content="hard to find land on earth? let's buy land on mars" />
+    <meta property="og:image" content="{{ url_for('static', filename='ogimage.png') }}" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -64,7 +68,7 @@
                 data: {},
                 success: function (response) {
                     let rows = response['orders'];
-                    for (let i = 0; i < rows.length; i ++ ) {
+                    for (let i = 0; i < rows.length; i++) {
                         let name = rows[i]['name'];
                         let address = rows[i]['address'];
                         let size = rows[i]['size'];
